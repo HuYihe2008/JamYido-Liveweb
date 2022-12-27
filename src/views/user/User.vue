@@ -265,10 +265,13 @@ import { before } from "lodash";
   }
   .user-head{
     margin-top: 70px;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-top: 1px;
   }
   .informaintion{
-    padding: 10px;
+    padding: 20px;
+    padding-left: 40px;
   }
   .div-all{
     margin: 10px;
@@ -279,6 +282,7 @@ import { before } from "lodash";
     border-radius:10px ;
   }
   .play{
-    padding: 10px;
+    padding: 20px;
+    padding-left: 40px;
   }
   </style>
