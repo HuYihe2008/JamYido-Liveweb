@@ -13,9 +13,9 @@
                     <span>直播</span>
                 </a>
             </li>
-            <li class="jamyido-head-li">
+            <li class="jamyido-head-li" style="width: 120px !important;">
                 <a href="./player.html" target="_blank">
-                    <span>WebRTC播放器</span>
+                    <span>WebRTC 播放器</span>
                 </a>
             </li>
             <li class="jamyido-head-li">
