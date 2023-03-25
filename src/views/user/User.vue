@@ -149,10 +149,10 @@ import { before } from "lodash";
         onGetlinkTrue() {
           window.$message.success("感谢您使用JamYido直播服务");
           getlinkRef.value = false;
-          proxy.$data.liveweb1 = 'rtmp://flv.rtmp.live.jamyido.top/live/',
-          proxy.$data.liveweb2 = 'rtmp://hls.rtmp.live.jamyido.top/live/',
+          proxy.$data.liveweb1 = 'rtmp://flv.live.jamyido.top/live/',
+          proxy.$data.liveweb2 = 'rtmp://hls.live.jamyido.top/live/',
           proxy.$data.liveweb3 = 'rtmp://rtmp.live.jamyido.top/live/',
-          proxy.$data.livewebfast = 'rtmp://webrtc.rtmp.live.jamyido.top/live/'
+          proxy.$data.livewebfast = 'rtmp://webrtc.live.jamyido.top/live/'
         },
         onGetlinkFalse() {
           window.$message.error("抱歉您拒绝了服务条款")
@@ -181,7 +181,7 @@ import { before } from "lodash";
     methods: {
       getid () {
         var id = this.id;
-        this.axios.get("https://www.jamyido.top/author/" + id + '/')
+        this.axios.get("https://www.jamyido.top/read/author/" + id + '/')
         .then((response) =>{
           const axios = require('axios');
           console.log(response.status);
@@ -190,15 +190,15 @@ import { before } from "lodash";
             console.log("成功")
             window.$message.success('验证成功')
             //密钥同步验证
-            axios.post("https://background.live.jamyido.top/terraform/v1/mgmt/secret/token",
+            axios.post("https://api.live.jamyido.top/terraform/v1/mgmt/secret/token",
             {
-              "apiSecret": "srs-v1-51d04f9cdf6840709cb87d6c70510b4d"
+              "apiSecret": "srs-v1-e3512d74bcdb4d52aeb6a17d72fae381"
             }).then((response) =>
             {
               console.log(response.data.data.token);
               var token = response.data.data.token
               const axios = require('axios');
-              axios.post("https://background.live.jamyido.top/terraform/v1/hooks/srs/secret/query",{
+              axios.post("https://api.live.jamyido.top/terraform/v1/hooks/srs/secret/query",{
                 "token": token
               },).then((response)=>{
                 console.log(response.data.data.publish)
